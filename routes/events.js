@@ -5,8 +5,8 @@
 
 import { Router } from 'express';
 import { check } from 'express-validator';
-import { isDate } from '../helpers';
-import { validarCampos, validarJWT } from '../middlewares';
+import { isDate } from '../helpers/index.js';
+import { validarCampos, validarJWT } from '../middlewares/index.js';
 import { actualizarEvento, crearEvento, eliminarEvento, getEventos } from '../controllers/events.js';
 
 const router = Router();

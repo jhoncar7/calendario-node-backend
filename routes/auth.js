@@ -5,8 +5,8 @@
 
 import { Router } from 'express';
 import { check } from 'express-validator';
-import { validarCampos, validarJWT } from '../middlewares';
-import { crearUsuario, loginUsuario, revalidarToken } from '../controllers/auth';
+import { validarCampos, validarJWT } from '../middlewares/index.js';
+import { crearUsuario, loginUsuario, revalidarToken } from '../controllers/auth.js';
 
 
 const router = Router();

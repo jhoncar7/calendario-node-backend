@@ -1,5 +1,5 @@
 import { response } from 'express';
-import { EventoModel } from '../models';
+import { EventoModel } from '../models/index.js';
 
 
 export const getEventos = async (req, res = response) => {

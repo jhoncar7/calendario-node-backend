@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import { dbConnection } from './database/config';
-import { authRouter, EventsRouter } from './routes'
+import { dbConnection } from './database/config.js';
+import { authRouter, EventsRouter } from './routes/index.js'
 
+const PORT = process.env.PORT || 8080;
 // Crear el servidor de express
 const app = express();
 
@@ -25,8 +26,8 @@ app.use('/api/events', EventsRouter);
 
 
 // Escuchar peticiones
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
 });
 
 

@@ -1,4 +1,4 @@
 
 
-export * from './Usuario';
-export * from './Evento';
+export * from './Usuario.js';
+export * from './Evento.js';

@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+import { Schema, model } from 'mongoose';
 
 const nameCollection = 'Evento';
 
@@ -9,7 +9,7 @@ const EventoSchema = Schema({
         required: true
     },
     notes: {
-        type: String,        
+        type: String,
     },
     start: {
         type: Date,
@@ -27,7 +27,7 @@ const EventoSchema = Schema({
 
 });
 
-EventoSchema.method('toJSON', function() {
+EventoSchema.method('toJSON', function () {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;
