@@ -1,12 +1,12 @@
-const mongoose = require('mongoose');
+import { connect } from 'mongoose';
 
 
-const dbConnection = async() => {
+export const dbConnection = async () => {
 
     try {
-        
-        await mongoose.connect( process.env.DB_CNN , {
-            useNewUrlParser: true, 
+
+        await connect(process.env.DB_CNN, {
+            useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
         });
@@ -23,6 +23,3 @@ const dbConnection = async() => {
 }
 
 
-module.exports = {
-    dbConnection
-}

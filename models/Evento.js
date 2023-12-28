@@ -1,5 +1,7 @@
 const { Schema, model } = require('mongoose');
 
+const nameCollection = 'Evento';
+
 const EventoSchema = Schema({
 
     title: {
@@ -32,6 +34,5 @@ EventoSchema.method('toJSON', function() {
 });
 
 
-
-module.exports = model('Evento', EventoSchema );
+export const EventoModel = model(nameCollection, EventoSchema);
 
