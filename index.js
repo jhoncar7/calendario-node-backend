@@ -31,7 +31,6 @@ app.listen(PORT, () => {
 });
 
 
-
-
-
-
+setInterval(() => {
+    console.log('Servidor sigue activo');
+}, 1000 * 60 * 20);
